@@ -13,9 +13,9 @@ export default function Home() {
 						<div className="col-12 col-md-6">
 							<nav aria-label="breadcrumb">
 								<ol className="breadcrumb">
-									<li className="breadcrumb-item"><a href="#">Home</a></li>
-									<li className="breadcrumb-item"><a href="#">Library</a></li>
-									<li className="breadcrumb-item active" aria-current="page">Data</li>
+									<li className="breadcrumb-item"><a href="#">Recipes</a></li>
+									<li className="breadcrumb-item"><a href="#">Bread</a></li>
+									<li className="breadcrumb-item active" aria-current="page">Quick Bread</li>
 								</ol>
 							</nav>
 							<h1 className="mb-5">Whole-Grain Banana Bread</h1>

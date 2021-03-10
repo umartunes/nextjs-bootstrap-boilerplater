@@ -1,65 +1,91 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.scss'
+import Layout from '../layout/layout'
+import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<Layout currentPage="recipes">
+			<div className="Home">
+				<div className="container">
+					<div className="row mt-5">
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+						{/* Left Side */}
+						<div className="col-12 col-md-6">
+							<nav aria-label="breadcrumb">
+								<ol className="breadcrumb">
+									<li className="breadcrumb-item"><a href="#">Home</a></li>
+									<li className="breadcrumb-item"><a href="#">Library</a></li>
+									<li className="breadcrumb-item active" aria-current="page">Data</li>
+								</ol>
+							</nav>
+							<h1 className="mb-5">Whole-Grain Banana Bread</h1>
+							<p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eligendi autem at! Itaque voluptatibus asperiores tempore cupiditate nostrum odit distinctio consequuntur tempora, sequi illo doloremque consectetur expedita dolores recusandae molestiae.</p>
+							{/* <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eligendi autem at! Itaque voluptatibus asperiores tempore cupiditate nostrum odit distinctio consequuntur tempora, sequi illo doloremque consectetur expedita dolores recusandae molestiae.</p> */}
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+							{/* Details */}
+							<div className="mt-5">
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+								<div className="row">
+									<div className="col-1">
+										<p className="mt-2"><span className='far fa-clock fa-2x'></span></p>
+									</div>
+									<div className="col-10 font-weight-bold">
+										<div className="row">
+											<div className="col">
+												<span><small>PREP</small> <br />10 mins</span>
+											</div>
+											<div className="col-5">
+												<span><small>BAKE</small> <br />1 hr to 1hr 15 mins</span>
+											</div>
+											<div className="col">
+												<span><small>TOTAL</small> <br />1hr 10 mins</span>
+											</div>
+										</div>
+									</div>
+								</div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+								<hr />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+								<div className="row">
+									<div className="col-1">
+										<p className="mt-2"><span className='far fa-list-alt fa-2x'></span></p>
+									</div>
+									<div className="col-10 font-weight-bold">
+										<div className="row">
+											<div className="col-6">
+												<span><small>YIELD</small> <br />1 loaf, 12 generous servings</span>
+											</div>
+											<div className="col">
+												<button className="btn btn-sm btn-outline-secondary mr-2"><span className='fas fa-plus mr-1'></span> Save Recipe</button>
+												<button className="btn btn-sm btn-outline-secondary"><span className='fas fa-print mr-1'></span> Print</button>
+											</div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+
+						{/* Right Side */}
+						<div className="col-12 col-md-6">
+							<div className="border rounded p-2">
+
+								<Image
+									src="/images/bread.jpg" // Route of the image file
+									width={710} // Desired size with correct aspect ratio
+									height={470} // Desired size with correct aspect ratio
+									alt="Bread"
+									layout="responsive"
+									className="img-fluid rounded"
+								/>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</Layout>
+
+	)
 }

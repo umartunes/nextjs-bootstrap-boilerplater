@@ -1,0 +1,46 @@
+// Docs to customize bootstrap in ReactJS are available here
+// https://create-react-app.dev/docs/adding-bootstrap/
+// https://react-bootstrap.github.io/getting-started/introduction/
+// https://getbootstrap.com/docs/4.4/getting-started/theming/
+
+/* make the customizations */
+$theme-colors: (
+    "primary": #461a42,
+    "secondary": #ef4500,
+    "purple": #5e35b1,
+    "pink": #c201a0,
+    "green": #4caf50,
+    "light-green": #5dc119,
+    "red": #ff0000,
+    "tomato": #f44336,
+    "grey": #bdbdbd,
+    "light-grey": #eeeeee,
+    "white": #ffffff,
+    "gold": #ffd700,
+    "custom": #ef4500,
+    "black-transparent": rgba(0, 0, 0, 0.45),
+);
+
+$body-bg: #f5f5f5;
+
+// $spacer: 1rem;
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+// );
+
+// $enable-rounded: true;
+// $enable-shadows: true;
+// $enable-gradients: false;
+// $enable-grid-classes: true;
+// $enable-print-styles: true;
+
+$enable-responsive-font-size: true;
+$grid-gutter-width: 18px !default;
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
